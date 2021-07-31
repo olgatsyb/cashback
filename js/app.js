@@ -44,7 +44,7 @@ function handleSubmit(evt) {
 }
 
 const formEl = document.getElementById('cashback-form');
-formEl.onsubmit = handleSubmit;
+formEl.addEventListener('submit', handleSubmit, true);
 
 const specialAmountInputEl = document.getElementById('special-amount-input');
 const otherAmountInputEl = document.getElementById('other-amount-input');
