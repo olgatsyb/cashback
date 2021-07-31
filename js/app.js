@@ -37,19 +37,11 @@ function handleClick(evt) {
         specialAmountErrorEl.textContent = 'Неверное значение. Введите число, например: 10000';
         return;
     }
-    if (!Number.isFinite(specialAmount)){
-        specialAmountErrorEl.textContent = 'Слишком большое значение. Введите число, например: 10000';
-        return;
-    }
 
     const otherAmountInputEl = document.getElementById('other-amount-input');
     const otherAmount = Number(otherAmountInputEl.value);
     if (Number.isNaN(otherAmount)){
         otherAmountErrorEl.textContent = 'Неверное значение. Введите число, например: 10000';
-        return;
-    }
-    if (!Number.isFinite(otherAmount)){
-        otherAmountErrorEl.textContent = 'Слишком большое значение. Введите число, например: 10000';
         return;
     }
 
