@@ -38,9 +38,9 @@ function handleSubmit(evt) {
     }
 
     const result = calculateCashback(specialAmount, otherAmount);
-    specialCashbackEl.textContent = `${result.specialCategoryCashback} руб.`;
-    otherCashbackEl.textContent = `${result.otherCategoryCashback} руб.`;
-    totalCashbackEl.textContent = `${result.totalCashback} руб.`;
+    specialCashbackEl.textContent = result.specialCategoryCashback.toFixed(0);
+    otherCashbackEl.textContent = result.otherCategoryCashback.toFixed(0);
+    totalCashbackEl.textContent = result.totalCashback.toFixed(0);
 }
 
 const formEl = document.getElementById('cashback-form');
@@ -53,6 +53,3 @@ const otherAmountErrorEl = document.getElementById('other-amount-error');
 const specialCashbackEl = document.getElementById('special-cashback');
 const otherCashbackEl = document.getElementById('other-cashback');
 const totalCashbackEl = document.getElementById('total-cashback');
-
-const cashback = calculateCashback(5000, 10000);
-console.log(cashback);
